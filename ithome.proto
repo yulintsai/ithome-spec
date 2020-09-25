@@ -1,11 +1,14 @@
 syntax = "proto3";
 
+import "google/protobuf/wrappers.proto";
+
 service HelloService {
   rpc SayHello (HelloRequest) returns (HelloResponse);
 }
 
 message HelloRequest {
   string greeting = 1;
+  google.protobuf.DoubleValue mail_count = 2;
 }
 
 message HelloResponse {
