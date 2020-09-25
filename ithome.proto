@@ -6,7 +6,8 @@ service HelloService {
 
 message HelloRequest {
   string greeting = 1;
-  string greeting2 = 2;
+  string hihi = 2;
+  string myhome = 3;
 }
 
 message HelloResponse {
