@@ -9,6 +9,7 @@ service HelloService {
 message HelloRequest {
   string greeting = 1;
   google.protobuf.DoubleValue mail_count = 2;
+  double mail_count_default = 3;
 }
 
 message HelloResponse {
