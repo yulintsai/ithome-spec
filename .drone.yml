@@ -7,8 +7,6 @@ steps:
   image: rain123473/proto-builder:g1.14-p3.12.0
   commands:
   - protoc *.proto --go_out=plugins=grpc:.
-  - ls
-  # - env GIT_TERMINAL_PROMPT=1
   - git config --global user.email rain123473@gmail.com
   - git config --global user.name yulintsai
   - ./build.sh "${DRONE_BRANCH}"
