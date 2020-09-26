@@ -9,4 +9,5 @@ steps:
   - protoc *.proto --go_out=plugins=grpc:.
   - git config --global user.email rain123473@gmail.com
   - git config --global user.name yulintsai
+  - env GIT_TERMINAL_PROMPT=1
   - ./build.sh "${DRONE_BRANCH}"
