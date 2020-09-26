@@ -9,4 +9,4 @@ steps:
   - protoc *.proto --go_out=plugins=grpc:.
   - git config --global user.email "${DRONE_COMMIT_AUTHOR_EMAIL}"
   - git config --global user.name "${DRONE_COMMIT_AUTHOR_NAME}"
-  - ./build.sh "${DRONE_BRANCH}"
+  - cd /go/src/app; ./build.sh "${DRONE_BRANCH}"
