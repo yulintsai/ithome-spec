@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+
+
+package ithome;
+option go_package = "./;ithome";
 import "google/protobuf/wrappers.proto";
 
 service HelloService {
@@ -15,3 +19,5 @@ message HelloRequest {
 message HelloResponse {
   string reply = 1;
 }
+// protoc --go_out=plugins=grpc:. authenticator.proto
+// protoc --go_out=paths=source_relative:./gen -I. authenticator.proto

@@ -1,0 +1,12 @@
+kind: pipeline
+type: docker
+name: gRPC-builder
+
+steps:
+- name: build-spec
+  image: rain123473/proto-builder:g1.14-p3.12.0
+  commands:
+  - protoc *.proto --go_out=plugins=grpc:.
+  - git config --global user.email "${DRONE_COMMIT_AUTHOR_EMAIL}"
+  - git config --global user.name "${DRONE_COMMIT_AUTHOR_NAME}"
+  - ./build.sh "${DRONE_BRANCH}"
