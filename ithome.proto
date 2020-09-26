@@ -10,6 +10,7 @@ service HelloService {
 message HelloRequest {
   string greeting = 1;
   double mail_count_default = 2;
+  double new_mail_count_default = 3;
 }
 
 message HelloResponse {
